@@ -1,0 +1,41 @@
+{% extends 'teacher/teacherbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<br><br>
+
+<div class="container">
+  <div>
+    <div>
+      <h2><b>Available Questions</b></h2><br>
+    </div>
+    <table>
+      <thead>
+        <tr>
+
+          <th><b>Question</b></th>
+      
+          <th><b>Marks</b></th>
+          <th><b>Action</b></th>
+        </tr>
+      </thead>
+      {% for c in questions %}
+      <tr>
+
+        <td> {{c.question}}</td>
+        
+        <td>{{c.marks}}</td>
+        <td class="text-center"><a class="btn btn-danger btn-xs btn-rounded" href="{% url 'remove-question' c.id  %}"><span class="material-symbols-outlined">delete</span></a></td>
+        
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}

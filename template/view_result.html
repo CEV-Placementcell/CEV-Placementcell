@@ -1,0 +1,36 @@
+{% extends 'studentbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+</head>
+<div class="container">
+  <div>
+    <div>
+      <h2><b>View Marks</b></h2><br>
+    </div>
+    <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+
+          <th>Exam Name</th>
+          
+          <th>Action</th>
+        </tr>
+      </thead>
+      {% for t in courses %}
+      {% if t.status == True %}
+      <tr>
+
+        <td> {{t.course_name}}</td>
+        
+        <td class="text-center"><a class="btn btn-dark btn-rounded" href="{% url 'check-marks' t.id stud.ad_no %}"><span class="glyphicon glyphicon-eye-open"></span> View Marks</a></td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+    </div>
+  </div>
+</div>
+{% endblock content %}

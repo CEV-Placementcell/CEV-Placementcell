@@ -1,0 +1,128 @@
+*{
+   margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:times new roman;
+  }
+
+.box{
+  width: 90%;
+  height: 1200px;
+}
+
+  .firstpart{
+    width:80%;
+    height: 950px;
+    background-color:white;
+    box-shadow: 4px 4px 4px grey,
+                0px 0px 8px grey,
+                0px 0px 12px grey;
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-left: 200px;
+    float: left;
+    }
+  /*.secondpart{
+    width:90%;
+    height: 1200px;
+    background-color:lightblue;
+    box-shadow: -6px 12px 12px -6px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-left: 80px;
+    float: left;
+    }*/
+    .firstheader{
+      width: 1000px;
+      height: 1000px;
+      background-color:white;
+      float: left;
+      margin-left: 10px;
+      margin-top: 40px;
+      border-radius: 10px;
+      overflow-y:auto;
+    }
+    /*.secondheader{
+      height: 1000px;
+      background-color:lightblue;
+      box-shadow: -6px 12px 12px -6px rgba(0,0,0,0.5);
+      float:left;
+      margin-left: 400px;
+      margin-top: 60px;
+      border-radius: 10px;
+      overflow-y:auto;
+    }*/
+    /*.fourthheader{
+      height: 1000px;
+      box-shadow: -6px 12px 12px -6px rgba(0,0,0,0.5);
+      float:left;
+      margin-left: 260px;
+      margin-top: 40px;
+      border-radius: 10px;
+      overflow-y:auto;
+    }*/
+    /*.fifthheader{
+      height: 1000px;
+      background-color: lightblue ;
+      box-shadow: -6px 12px 12px -6px rgba(0,0,0,0.5);
+      float:left;
+      margin-left:260px;
+      margin-top: 1000px;
+      border-radius: 10px;
+      overflow-y:auto;
+    }*/
+
+.colums
+{
+   width:50% ;
+}
+
+.tablebox{
+  /*box-shadow: -1px 12px 12px -6px rgba(0,0,0,0.5);*/
+  margin-left: 100px;
+}
+
+.table{
+  width: 80%;
+  height:20px;
+  box-shadow: -1px 12px 12px -6px rgba(0,0,0,0.5);
+  margin-top: 40px;
+  margin-left: 20px;
+  overflow-y:auto;
+  align-content:center ;
+}
+th
+{
+  background-color:#40567B;
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  position: sticky;
+  top: 0;
+}
+td
+{
+      font-size: 18px;
+      height: 30px;
+}
+
+table, th, td {
+  padding: 20px;
+  border: 1px solid lightgray;
+  text-align: center;
+  cursor: pointer;
+}
+tr:nth-child(odd){
+  /*background-color: lightskyblue;*/
+}
+tr:nth-child(odd):hover{
+  background-color:#A9CCCF ;
+}
+tr:nth-child(even){
+  /*background-color: #ededed;*/
+}
+tr:nth-child(even):hover{
+  background-color: #A9CCCF ;
+}
+
+

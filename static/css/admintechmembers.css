@@ -1,0 +1,101 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:times new roman;
+  }
+
+.box{
+  width: 100%;
+  height: 1000px;
+}
+
+.firstheader{
+  width: 1300px;
+  height: 1000px;
+  background-color: white;
+  box-shadow: 4px 4px 4px grey,
+              0px 0px 8px grey,
+              0px 0px 12px grey;
+  margin-left: 20px;
+  margin-top: 60px;
+  border-radius: 10px;
+}
+.secondheader{
+  width: 1300px;
+  height: 1000px;
+  background-color: white;
+  box-shadow: 4px 4px 4px grey,
+              0px 0px 8px grey,
+              0px 0px 12px grey;
+  margin-left: 20px;
+  margin-top: 100px;
+  margin-bottom: 120px;
+  border-radius: 10px;
+}
+.colums{
+  width: 50%;
+}
+.table{
+  width: 95%;
+  height:800px;
+  margin-left: 20px;
+  /* box-shadow: -1px 12px 12px -6px rgba(0,0,0,0.5); */
+  margin-top: 40px;
+  overflow-y:auto;
+  align-content:center ;
+}
+th
+{
+  background-color:royalblue;
+  color: white;
+  cursor: pointer;
+  height: 50px;
+}
+th
+{
+  background-color:#40567B;
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  position: sticky;
+  top: 0;
+}
+td
+{
+      font-size: 18px;
+      height: 30px;
+}
+
+table, th, td {
+  padding: 20px;
+  border: 1px solid lightgray;
+  text-align: center;
+  cursor: pointer;
+}
+/* tr:nth-child(odd){
+  background-color: lightskyblue;
+} */
+tr:nth-child(odd):hover{
+  background-color:#A9CCCF ;
+}
+/* tr:nth-child(even){
+  background-color: #ededed;
+} */
+tr:nth-child(even):hover{
+  background-color: #A9CCCF ;
+}
+
+button{
+  padding: 10px 15px;
+  width: 90%;
+  margin-left:10px;
+  border: 0;
+  outline: none;
+  background: #0d47a1;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500px;
+  border-radius: 30px;
+}

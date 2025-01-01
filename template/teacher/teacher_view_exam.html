@@ -1,0 +1,43 @@
+{% extends 'teacher/teacherbase.html' %}
+{% block content %}
+{%load static%}
+
+
+<div class="container">
+  <div>
+    <div>
+      <h2>Available Exams</h2><br>
+    </div>
+    <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+
+          <th>Course</th>
+          <th>Total Question</th>
+          <th>Total Marks</th>
+          <th>Exam Duration</th>
+          <th>Status</th>
+          <th>Action</th>
+          
+        </tr>
+      </thead>
+      {% for t in courses %}
+      <tr>
+
+        <td> {{t.course_name}}</td>
+        <td>{{t.question_number}}</td>
+        <td>{{t.total_marks}}</td>
+        <td>{{t.time}}</td>
+        <td>{{t.status}}</td>
+        
+        <td class="text-center"><a class="btn btn-dark btn-xs ms-1"  href="{% url 'see-question' t.id  %}"><span class="material-symbols-outlined">visibility</span></a>&nbsp;<a class="btn btn-dark btn-xs ms-1" href="{% url 'teacher_update_course' t.id  %}"><span class="material-symbols-outlined">edit</span></a>&nbsp;<a class="btn btn-danger btn-xs ms-1" href="{% url 'delete-exam' t.id  %}"><small class="material-symbols-outlined">delete</small></a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}

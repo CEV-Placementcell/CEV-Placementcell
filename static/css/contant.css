@@ -1,0 +1,221 @@
+.drive
+{
+	font-size: 60px;
+	text-align: center;
+	font-style:serif;
+
+}
+.mainform{
+width: 60%;
+height: 800px;
+margin: 0 auto;
+font-size: 20px ;
+padding-top: 10px;
+padding-bottom: 10px;
+/*color: #456dad;*/
+margin-left: 140px;
+padding-bottom:300px ;
+padding-top:50px ;
+font-family:times new roman ;
+
+position: relative;
+
+}
+.boxshadow{
+      width: 80%;
+      height: 1000px;
+      background-color:white;
+      box-shadow: 4px 4px 4px grey,
+                  0px 0px 8px grey,
+                  0px 0px 12px grey;
+      margin-left:30%;
+      margin-top: 100px;
+      border-radius: 10px;
+      margin-bottom:150px ;
+
+
+    }
+.text{
+height: 40px;
+width: 400px;
+
+}
+input{
+height: 40px;
+width: 400px;
+float: right;
+font-size: 15px;
+}
+select{
+height: 40px;
+width: 400px;
+float: right;
+font-size: 18px;
+}
+textarea
+{
+height: 90px;
+width: 400px;
+float: right;
+font-size: 18px;	
+}
+
+.boxshadow{
+      width: 70%;
+      height: 1000px;
+      background-color:white;
+      box-shadow: 4px 4px 4px grey,
+                  0px 0px 8px grey,
+                  0px 0px 12px grey;
+      margin-left: 40px;
+      margin-top: 100px;
+      border-radius: 10px;
+
+    }
+/*.buttons{
+  
+  margin-left: 50%;
+
+}
+.btn{
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  /*transition: 0.8s;*/
+  /*position: relative;
+  overflow: hidden;
+}*/
+.head{
+  padding-left:40px ;
+  font-family: times new roman;
+  font-size:70px ;
+  padding-left:400px ;
+}
+.table{
+  width: 56%;
+  height: 600px;
+  margin-left: 300px;
+  margin-top: 40px;
+  overflow-y:auto ;
+
+}
+.table a
+{
+  color: blue;
+}
+th
+{
+  background-color:#40567B;
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  font-family:times new roman ;
+}
+td
+{
+      font-size: 18px;
+      height: 30px;
+      font-family:times new roman ;
+}
+
+table, th, td {
+  padding: 20px;
+  border: 1px solid lightgray;
+  text-align: center;
+  cursor: pointer;
+  font-family:times new roman ;
+}
+tr:hover{
+  background-color:#A9CCCF;
+}
+.postertable{
+  height: 500px;
+      background-color: lightblue ;
+      float:left;
+      margin-left: 260px;
+      border-radius: 10px;
+      overflow-y:auto;
+}
+.eventmainform{
+width: 60%;
+height: 500px;
+margin: 0 auto;
+font-size: 20px ;
+padding-top: 10px;
+padding-bottom: 10px;
+/*color: #456dad;*/
+margin-left: 170px;
+padding-bottom:300px ;
+padding-top:50px ;
+font-family:times new roman ;
+
+position: relative;
+
+}
+.eventboxshadow{
+      width: 70%;
+      height: 800px;
+      background-color:white;
+      box-shadow: 4px 4px 4px grey,
+                  0px 0px 8px grey,
+                  0px 0px 12px grey;
+      margin-left:250px ;
+      margin-top: 100px;
+      border-radius: 10px;
+      margin-bottom:150px ;
+        }
+.firstheader{
+      width: 1500px;
+      height: 1000px;
+      background-color:white;
+      box-shadow: 4px 4px 4px grey,
+                  0px 0px 8px grey,
+                  0px 0px 12px grey;
+      margin-left: 40px;
+      margin-top: 100px;
+      border-radius: 10px;
+}  
+.logout1{
+  margin-right:75px ;
+  float:right ;
+  border-radius:red ;
+} 
+p{
+  font-size:25px ;
+  color: black;
+  font-family: times new roman;
+}  
+   button{
+  padding: 10px 15px;
+  width: 100px;
+  margin-left:100px;
+  border: 0;
+  outline: none;
+  background: #0d47a1;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500px;
+  border-radius: 30px;
+}
+.eventtable{
+  width: 50%;
+  height: 600px;
+  margin-left: 300px;
+  margin-top: 40px;
+  overflow-y:auto ;
+  margin-bottom:5px ;
+}
+      
+
+
+
+
+
+  

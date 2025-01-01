@@ -1,0 +1,314 @@
+
+
+<!doctype html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Placement Cell College of Engineering Vadakara, Kozhikode</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">                
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/tooplate-crispy-kitchen.css' %}" rel="stylesheet">
+        <link href="{% static 'css/indexcss.css' %}" rel="stylesheet">
+        <link href="{% static 'css/footercss.css' %}" rel="stylesheet">
+
+
+
+        <link href="{% static 'css/reg.css' %}" rel="stylesheet">
+         </head>
+    
+    <body>
+        
+        <nav><!-- class="navbar navbar-expand-lg bg-white shadow-lg"-->
+            <div class="container">
+                <div class="indexheader">
+                
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+                    <div style="float: left; width: 10%;">
+                        <img src="{% static 'images\placementcelllogo.png' %}" width="80%"height="100px">
+                    </div>
+                    <div>
+                        <a  style="color:black;">
+                            Placement Cell<br>College of Engineering Vadakara, Kozhikode
+                    </div>
+                </div>
+
+</nav>
+
+
+
+<div class="indexnavbar">
+            <ul>
+                <li><a href="index.html">Home</a>
+                </li>
+                <li><a href="index.html">About us</a>
+                </li>
+                <li class=""><a href="#"></a>Registration
+                </li>
+                <li><a href="#">Login</a>
+                    <div class="Login">
+                        <ul>
+                            <li><a href="stlogin.html">Student</a></li>
+                            <li><a href="techlog.html">Tech Team</a></li>
+                            <li><a href="admlog.html">Admin</a></li>
+                        </ul>
+                    </div>
+                  </li>
+                <li class = "active"><a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang = "en"> -->
+<head>
+	<meta charset="UTF-8">
+	<title> Support </title>
+	<link rel="stylesheet" href="{% static 'css/support.css' %}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=EB+Garamond&family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class = "container">
+		<h1> Connect With Us </h1>
+		<p> We would love to respond to your queries and help you succeed.<br> Feel free to get in touch with us.</p>
+
+
+		<div class="contact-box">
+			<div class="contact-left">
+				<h3>Sent your request</h3>
+				<form method="post">
+                    {% csrf_token %}
+					<div class = "input-row">
+						<div class = "input-group">
+							<label> Name </label>
+							<input type="text" placeholder="" value="{{stud.name}}" name="name">
+						</div>
+						<div class = "input-group">
+							<label> University Register No</label>
+							<input type="text" value="{{stud.ad_no}}" name="adno">
+						</div>
+					</div>
+					<div class = "input-row">
+						<div class = "input-group">
+							<label> Drive Number </label>
+							<input type="number" name="Driveno">
+						</div>
+                        <div class = "input-group">
+							<label> Doubt Title</label>
+							<input type="text" name="drive_title">
+						</div>
+					</div>
+					<div class = "input-row">
+						
+						<div class = "input-group">
+							<label> Screenshot</label>
+							<input type="file" id="img" name="img" accept="image/*">
+						</div>
+
+					</div>
+					
+					<label> Message </label>
+					<textarea rows="5" placeholder="Your Message" name="drive_desc"></textarea>
+
+					<button type ="submit"> SEND </button>
+
+
+			
+			</form>
+
+	        </div>
+	        <div class="contact-right">
+	        	<h3>Reach Us</h3>
+
+	        	<table>
+	        		<tr>
+	        			<td>Email</td>
+	        			<td>placementcell@gmail.com</td>
+	        		</tr>
+
+	        		<tr>
+	        			<td>Phone</td>
+	        			<td>+91 487 2420435</td>
+	        		</tr>
+
+	        		<tr>
+	        			<td>Address</td>
+	        			<td>College of Engineering Vadakara,<br>Mandarathur – 673 541, Kerala, India</td>
+	        		</tr>
+
+
+
+	        </div>
+	    </div>
+    </div>
+</table></div></div></div>
+
+
+
+<footer class="site-footer section-padding">
+           
+            <div class="container">
+               
+                <div class="row">
+
+                    <div class="col-12">
+                        <h4 class="text-white mb-4 me-5">Placement Cell</h4>
+                    </div>
+
+                    <div class="col-lg-4 col-md-7 col-xs-12 tooplate-mt30">
+                        <h6 class="text-white mb-lg-4 mb-3">Location</h6>
+
+                        <p>College of Engineering Vadakara,<br>Mandarathur - 673 541, Kerala, India</p>
+
+                        <a href="https://maps.app.goo.gl/RQiJvmgnb86huAre9" target="_blank" class="btn btn-light" style="border-radius: 8px;">Direction</a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-5 col-xs-12 tooplate-mt30">
+                        <h6 class="text-white mb-lg-4 mb-3">Contact Info</h6>
+
+                        <p>Tel : <a href="tel: 010-02-0340" class="tel-link">010-02-0340</a></p>
+                        <p>Email : placements@cev.ac.in</p>
+
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-xs-12 tooplate-mt30">
+                        <h6 class="text-white mb-lg-4 mb-3">Social</h6>
+
+                        <ul class="social-icon">
+                            {% comment %} <li><a href="#" class="social-icon-link bi-facebook"></a></li> {% endcomment %}
+
+                            <li><a href="https://instagram.com/placement_cell_stc?igshid=YmMyMTA2M2Y=" class="social-icon-link bi-instagram"></a></li>
+
+                            <li><a href="https://twitter.com/search?q=tooplate.com&src=typed_query&f=live" target="_blank"
+                            class="social-icon-link bi-twitter"></a></li>
+
+                            {% comment %} <li><a href="#" class="social-icon-link bi-youtube"></a></li> {% endcomment %}
+                        </ul>
+                   
+                        <p class="copyright-text tooplate-mt60">Copyright © 2022 BCA Students, Ltd.
+                        <!-- <br>Design: <a rel="nofollow" href="https://www.tooplate.com/" target="_blank">Tooplate</a></p> -->
+                       
+                    </div>
+
+                </div><!-- row ending -->
+               
+             </div><!-- container ending -->
+             
+        </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="BookingModal" tabindex="-1" aria-labelledby="BookingModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="mb-0">Reserve a table</h3>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body d-flex flex-column justify-content-center">
+                        <div class="booking">
+                           
+                            <form class="booking-form row" role="form" action="#" method="post">
+                                <div class="col-lg-6 col-12">
+                                    <label for="name" class="form-label">Full Name</label>
+
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <label for="email" class="form-label">Email Address</label>
+
+                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="your@email.com" required>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <label for="phone" class="form-label">Phone Number</label>
+
+                                    <input type="telephone" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="123-456-7890">
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <label for="people" class="form-label">Number of persons</label>
+
+                                    <input type="text" name="people" id="people" class="form-control" placeholder="12 persons">
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <label for="date" class="form-label">Date</label>
+
+                                    <input type="date" name="date" id="date" value="" class="form-control">
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <label for="time" class="form-label">Time</label>
+
+                                    <select class="form-select form-control" name="time" id="time">
+                                      <option value="5" selected>5:00 PM</option>
+                                      <option value="6">6:00 PM</option>
+                                      <option value="7">7:00 PM</option>
+                                      <option value="8">8:00 PM</option>
+                                      <option value="9">9:00 PM</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Special Request</label>
+
+                                    <textarea class="form-control" rows="4" id="message" name="message" placeholder=""></textarea>
+                                </div>
+
+                                <div class="col-lg-4 col-12 ms-auto">
+                                    <button type="submit" class="form-control">Submit Request</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer"></div>
+                   
+                </div>
+               
+            </div>
+        </div>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
+
+
+
+
+
+
+</body></html>
+
+	
+

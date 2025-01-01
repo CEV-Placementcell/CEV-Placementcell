@@ -1,0 +1,19 @@
+.about_us
+{
+font-weight: bold;
+font-family: serif;
+font-size: 1.700em;
+padding-top: 50px;
+padding-bottom:10px ;
+text-align: center;
+
+}
+.about
+{
+font-size:1.300em;
+padding-top:10px;
+padding-bottom:50px;
+font-family: ariel;
+padding-left: 3%;
+padding-right: 3%;
+}

@@ -1,0 +1,35 @@
+{% extends 'studentbase.html' %}
+{% block content %}
+{%load static%}
+
+<div class="container">
+  <div>
+    <div>
+      <h2>Available Exams</h2><br>
+    </div>
+    <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+
+          <th>Exam Name</th>
+          
+          <th>Action</th>
+        </tr>
+      </thead>
+      {% for t in courses %}
+      {% if t.status == True %}
+      <tr>
+
+        <td> {{t.course_name}}</td>
+        
+        <td class="text-center"><a class="btn btn-dark btn-xs ms-1" href="{% url 'take-exam' t.id stud.ad_no %}">Attend Exam</a></td>
+
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+  </div>
+  </div>
+</div>
+{% endblock content %}

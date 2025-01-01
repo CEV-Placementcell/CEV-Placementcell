@@ -1,0 +1,179 @@
+{% load static %}
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>College of Engineering Vadakara, Kozhikode</title>
+
+    <!-- CSS Files -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/indexcss.css' %}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+
+    <style>
+        a:link {
+            text-decoration: none;
+        }
+        footer {
+            background: linear-gradient(to bottom, #771f1f, var(--dark-color), transparent 200%);
+        }
+        .navbar-light .navbar-toggler {
+            color: #771f1f;
+            border-color: #771f1f;
+        }
+
+        /* Flexbox for testimonials */
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1px;
+            justify-content: space-around;
+            
+        }
+
+        .testimonial-card {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 10px;
+            width: 100%; /* Adjust this for 3 cards per row */
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            text-align: center;
+            margin-bottom: 20px;
+            height : auto;
+            background-color: rgb(181, 178, 178);
+        }
+
+        .testimonial-card img {
+            border-radius: 0%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        /* Media Query for responsiveness */
+        @media (max-width: 768px) {
+            .testimonial-card {
+                width: 48%; /* 2 cards per row on small screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-card {
+                width: 100%; /* 1 card per row on extra small screens */
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #771f1f;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="{% static 'images/logo-white.png' %}" style="width: 250px; height: auto;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/"><b>Home</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" style="border-radius: 8px;" href="#footer"><b>&nbsp;Contact Us</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link activeh text-white" style="border-radius: 8px;" aria-current="page" href="{% url 'testimonials' %}"><b>Testimonials</b></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Testimonials Section -->
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="font-weight-bold">PLACEMENTS 2024</h2>
+        <p>" The Right Placement Today Shapes The Leader Of Tomorrow "</p>
+    </div>
+    <div class="row">
+        <!-- Testimonial Cards -->
+        <div class="col-md-4 mb-4">
+            <div class="testimonial-card">
+                <img src="{% static 'Testimonials/placement1.jpeg' %}" alt="Alumni Image" class="img-fluid">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="testimonial-card">
+                <img src="{% static 'Testimonials/placement2.jpeg' %}" alt="Alumni Image" class="img-fluid">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="testimonial-card">
+                <img src="{% static 'Testimonials/placement3.jpeg' %}" alt="Alumni Image" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="testimonial-card">
+                <img src="{% static 'Testimonials/placement4.jpeg' %}" alt="Alumni Image" class="img-fluid">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="testimonial-card">
+                <img src="{% static 'Testimonials/placement5.jpeg' %}" alt="Alumni Image" class="img-fluid">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="testimonial-card">
+                <img src="{% static 'Testimonials/placement6.jpeg' %}" alt="Alumni Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Section with ID for scrolling -->
+<footer id="footer" class="text-center text-lg-start text-white" style="background-color: #771f1f;">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+        </div>
+        <div>
+            <a href="#" class="me-4 text-reset"><i class="fa fa-facebook-official" style="font-size:24px"></i></a>
+            <a href="https://instagram.com/placement_cell_stc" class="me-4 text-reset"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+            <a href="#" class="me-4 text-reset"><i class="fa fa-twitter" style="font-size:24px"></i></a>
+            <a href="#" class="me-4 text-reset"><i class="fa fa-youtube-play" style="font-size:24px"></i></a>
+            <a href="#" class="me-4 text-reset"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a>
+        </div>
+    </section>
+    <section class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h3 class="text-uppercase fw-bold mb-4">Placement Cell</h3>
+                <p>
+                    College of Engineering Vadakara<br>
+                    Mandarathur - 673541, Kerala, India
+                </p>
+                <a href="https://maps.app.goo.gl/RQiJvmgnb86huAre9" target="_blank" class="btn btn-light" style="border-radius: 8px;">Direction</a>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                <p><i class="fa fa-home me-3"></i> Kurunthodi - College Rd</p>
+                <p><i class="fa fa-envelope me-3"></i> placements@cev.ac.in</p>
+            </div>
+        </div>
+    </section>
+</footer>
+
+
+<!-- JS Files -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

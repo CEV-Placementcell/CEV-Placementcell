@@ -1,0 +1,144 @@
+
+
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:times new roman;
+}
+
+
+
+
+
+
+.indexheader{
+text-align: left;
+height: 120px;
+padding-left: 0px;
+width: 100%;
+font-size: 36px;
+font-weight: bold;
+}
+
+
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+
+ table#table1 {
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+  }
+
+
+
+
+.content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:times new roman;
+}
+.box{
+  width: 100%;
+  height: 1200px;
+}
+.firstheader{
+      width: 45%;
+      height: 1000px;
+      background-color:white;
+      box-shadow: 4px 4px 4px grey,
+                  0px 0px 8px grey,
+                  0px 0px 12px grey;
+      margin-left: 40px;
+      margin-top: 60px;
+      border-radius: 10px;
+}
+  
+.colums
+{
+   width:50% ;
+}
+.table{
+  width: 80%;
+  height:800px;
+  margin-left: 100px;
+  box-shadow: -1px 12px 12px -6px rgba(0,0,0,0.5);
+  margin-top: 40px;
+  margin-left: 20px;
+  overflow-y:auto;
+  align-content:center ;
+}
+th
+{
+  background-color:#40567B;
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  
+  top: 0;
+}
+td
+{
+  font-size: 18px;
+  height: 30px;
+}
+
+table, th, td {
+  padding: 20px;
+  border: 1px solid lightgray;
+  text-align: center;
+  cursor: pointer;
+}
+tr:nth-child(odd){
+  /*background-color: lightskyblue;*/
+}
+tr:nth-child(odd):hover{
+  background-color: #A9CCCF;
+}
+tr:nth-child(even){
+  /*background-color: #ededed;*/
+}
+tr:nth-child(even):hover{
+  background-color:  #A9CCCF;
+}
+

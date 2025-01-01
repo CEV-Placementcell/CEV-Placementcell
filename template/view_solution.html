@@ -1,0 +1,38 @@
+{% extends 'studentbase.html' %} {% block content %} {%load static%}
+
+  <div class="container">
+    <div>
+      <div>
+      <h2 style="text-align: center">Answer Key</h2><br>
+   </div>
+   <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+
+          <th>Course</th>
+          
+          <th>Action</th>
+        </tr>
+      </thead>
+      {% for t in key %}
+      {% if t.status == True %}
+      <tr>
+
+        <td> {{t.course_name}}</td>
+        {%if t.solution == "" %}
+        <td class='text-center'>Not Available</td>
+        {% else %}
+        <td class='text-center'><a class="btn btn-dark btn-xs ms-1" href="{% url 'download_solution' t.id  stud.ad_no %}">Download</a></td>
+        {% endif %}
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+    

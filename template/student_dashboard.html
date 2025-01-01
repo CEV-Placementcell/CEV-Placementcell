@@ -1,0 +1,47 @@
+{% extends 'studentbase.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+
+<div class="container">
+  <div>
+    <h2>MOCK TEST</h2><br>
+  </div>
+  <div class="row">
+
+  
+    <div class="col-md-4 col-xl-6">
+      <a href='{% url "student-exam" stud.ad_no %}'>
+        <div class="card bg-c-blue order-card">
+          <div class="card-block">
+            <h6 class="m-b-20">Available Exams</h6>
+            <br>
+            <h2 style="text-align: right;"><i class="fas fa-book f-left"></i><span>{{total_course}}</span></h2>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+
+    <div class="col-md-4 col-xl-6">
+      <a href="{% url 'student-marks' stud.ad_no %}">
+        <div class="card bg-c-yellow order-card">
+          <div class="card-block">
+            <h6 class="m-b-20">View Marks</h6>
+            <br>
+            <h2 style="text-align: right;"><i class="fas fa-question-circle f-left"></i><span>{{total_question}}</span>
+            </h2>
+
+          </div>
+        </div>
+      </a>
+    </div>
+  
+  </div>
+</div>
+{% endblock content %}

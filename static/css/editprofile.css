@@ -1,0 +1,115 @@
+.profiletable
+{
+/* cellpadding: 3px; */
+/*border: 1px solid;*/
+margin-left: 10%;
+width: 80%;
+font-size: 26px;
+margin-top: 25px;
+margin-bottom: 10px;
+}
+
+.profile
+{
+position: relative;
+}
+.profile::after
+{
+content: '';
+position: absolute;
+top: 0px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+/*background-image: url("../images/placementcelllogo.png");*/
+/*background-repeat: no-repeat;
+background-position: center;
+background-size: 25%;
+opacity: 0.15;*/
+}
+
+/* td{
+border: 2px solid;
+} */
+
+.submit
+{
+background: #355C93;
+color: #fff;
+font-size: 24px;
+width: 10%;
+align-content:center;
+}
+
+.submitbutton:hover
+{
+background: #a7cafc;
+color: #333;
+}
+*/
+
+.print
+{
+background: #355C93;
+color: #fff;
+font-size: 24px;
+width: 10%;
+}
+
+.print:hover
+{
+background: #a7cafc;
+color: #333;
+}
+
+.btn{
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  
+
+}
+
+
+.btn3{
+  color: #fff;
+}
+
+.btn3:hover{
+  color: #3498db;
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #3498db;
+  z-index: -1;
+  transition: 0.8s;
+}
+.btn3::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.btn3::before{
+  height: 180%;
+}
+
+.btn3:hover::before{
+  height: 0%;
+}
+
+.buttons{
+  align-content: center;
+  margin-left: 47%;
+
+}

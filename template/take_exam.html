@@ -1,0 +1,49 @@
+{% extends 'studentbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+    <style>
+        .row {
+            --bs-gutter-x:0;
+        }
+    </style>
+</head>
+<div class="container">
+    <div>
+        <div class="row">
+            <div class="card mx-4 my-4" style="width: 100%;box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);">
+                <div class="card-body">
+
+                    <h4><b>Exam Details :</b></h4>
+                    <p>
+                            <ul>
+                            <li>Exam Name : {{course.course_name}}</li>
+                            <li>Total Question : {{total_questions}}</li>
+                            <li>Total Marks : {{total_marks}}</li>
+                            <li>Time : {{course.time}}</li><br>
+                        </ul>
+                    </p>
+
+
+
+                    <h4><b>Rules :</b></h4>
+                    <p>
+                            <ul>
+                            <li>1.All questions are MCQ (multiple choice question)</li>
+                            <li><span class="text-danger">2.The Questions are shuffled when the page is reloaded.</span></li>
+                            <li>3.Try to answer all the questions within stipulated time.</li>
+                            <li>4.The answers are automatically submitted when the time expires.</li>
+                            <li>5.You will be able to view marks immediately once after you submit the answer.</li>
+                            </ul>
+                    </p>
+                    <br>
+                    <a href="{% url 'start-exam' course.id stud.ad_no  %}" class="btn btn-dark btm-xs ms-1">Enter Examination</a>
+                    <br>
+                </div>  
+                <div class="card-footer" style="width: 100%;">All the Best !</div>  
+            </div>  
+        </div>  
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,324 @@
+.indexheader{
+text-align: left;
+height: 120px;
+padding-left: 0px;
+width: 100%;
+font-size: 36px;
+font-weight: bold;
+}
+
+.indexnavbar
+{
+background-color:#355C7D;
+text-align: center;
+height: 60px;
+margin: 0px;
+padding: 0px;
+width: 100%;
+
+}
+
+.indexnavbar ul
+{
+display: inline-flex;
+list-style: none;
+width: 100%;
+padding: 0px;
+
+
+}
+
+.indexnavbar ul li
+{
+width:120%;
+margin:7px;
+padding: 7px;
+color:white;
+font-weight:900;
+font-family: times new roman;
+font-size:20px ;
+
+
+}
+.indexnavbar ul li a
+{
+   text-decoration: none;
+   color:white;
+}
+.active, .indexnavbar ul li:hover
+{
+background:#456dad;
+border-radius:2px;
+}
+.contant
+{
+display: none;
+width: 20%;
+align-content: center;
+margin: 0 auto;
+}
+.contant ul
+{
+width: 90%;
+align-content: center;
+}
+
+.contant ul li
+{
+text-align: center;
+width: 90%;
+}
+ .indexnavbar ul li:hover .contant
+{
+display: block;
+position: absolute;
+background-color: #355C7D;
+width: 15%;
+
+}
+ .indexnavbar ul li:hover .contant ul
+{
+display: block;
+margin: 10px;
+}
+/*scrolling notification*/
+ .marquee
+{
+width: 100%;
+background-color:whitesmoke;
+text-transform: uppercase;
+white-space:nowrap ;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.marquee div
+{
+font-size:1.500em;
+font-family: sans-serif;
+animation: animate 10s linear infinite;
+padding-left: 100%;
+
+}
+@keyframes animate{
+100%{
+transform: translate(-100%,0);
+}
+}
+.placement-partners
+{
+font-family: serif;
+font-size:1.700em ;
+font-weight: bold;
+text-align: center;
+}
+/*scrolling posters*/
+.slider
+{
+height: 250px;
+margin: auto;
+position: relative;
+width: 90%;
+display: grid;
+place-items: center;
+overflow: hidden;
+/*padding-top: 50px;
+padding-bottom:30px;*/
+
+}
+.slide-track
+{
+display: flex;
+width:calc(250px * 14 );
+animation: scroll 10s linear infinite;
+
+}
+@keyframes scroll{
+0%{
+transform: translateX(0);
+}
+100%{
+transform: translateX(calc(-250px * 4));
+}
+}
+
+.slide-images
+{
+height: 200px;
+width: auto;
+display: flex;
+/*align-items: center;*/
+padding: 20px;
+/*padding-bottom: 10px;
+perspective: 100px;*/
+
+}
+
+
+
+/*td
+{
+      font-size: 18px;
+      height:3px;
+
+}
+
+table, th, td {
+
+  border: 1px solid gray;
+  border-collapse:collapse;
+  text-align: center;
+}
+.table
+{
+
+   
+   width:90% ;
+   align-items: center;
+
+}
+th{
+   background-color:blue;
+   color:blanchedalmond;
+   height: 2px;
+}
+tr:nth-child(odd){
+   background-color:lightblue ;
+}*/
+.shapes
+{
+    padding-top:50px ;
+    
+
+     
+}
+.portion1
+{
+    padding-left:150px ;
+    width:50%;
+    height:600px ;
+    float: left;
+}
+.portion2
+{
+    padding-left:150px ;
+    width:50% ;
+    height:600px ;
+    float: left;
+}
+
+.smllrect
+{
+    padding-top:25px ;
+    padding-left:5px ;
+    padding-right:190px ;
+    
+}
+
+
+.rectangle_1
+{
+    width:290px;
+    height:180px;
+    background-color:darkcyan;
+    border-radius:15px ;
+      background-color:#40567B;
+      box-shadow: 4px 4px 4px grey,
+                  0px 0px 8px grey,
+                  0px 0px 12px grey;
+}
+.rectangle_2
+{
+    width: 290px;
+    height:180px;
+    background-color: darkcyan;
+    border-radius:15px ;
+      background-color:#40567B;
+      box-shadow: 4px 4px 4px grey,
+                  0px 0px 8px grey,
+                  0px 0px 12px grey;
+}
+/*.rectangle_3
+{
+    width: 100px;
+    height:120px;
+    background-color:white;
+    border-radius:15px ;
+    text-align:center ;
+    padding-top: 30px;
+    font-size: 42px;
+
+}*/
+/*.drive{
+    padding-left: 120px;
+    padding-right:100px ;
+    padding-top:60px ;
+
+}*/
+/*.portion3
+{
+    width: 40%;
+    height:180px ;
+    float: left;
+
+    
+}*/
+
+.portion4
+{
+    width: 60%;
+    height:180px ;
+     float: left;
+
+}
+.boxtest{
+    font-size: 26px;
+    padding-top:68px ;
+    font-weight: bold;
+    color: white;
+    margin-left:80px ;
+    font-family:times new roman ;
+}
+.fullportion a{
+    color:white;
+}
+
+.fullportion
+{
+    width:100% ;
+    height:650px ;
+}
+
+/*.rectangle_6
+{
+    width: 100px;
+    height:120px;
+    background-color:white;
+    border-radius:15px ;
+    text-align:center ;
+    padding-top: 30px;
+    font-size: 42px;
+    color: red;
+
+}*/
+/*.rectangle_4
+{
+    width: 290px;
+    height:180px;
+    background-color:#40567B;
+    border-radius:15px ;
+}
+.rectangle_5
+{
+    width: 100px;
+    height:120px;
+    background-color:white;
+    border-radius:15px ;
+    text-align:center ;
+    padding-top: 30px;
+    font-size: 42px;
+
+}*/
+
+
+ 
+

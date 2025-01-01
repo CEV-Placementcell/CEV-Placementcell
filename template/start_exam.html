@@ -1,0 +1,110 @@
+{% extends 'studentbase.html' %} {% block content %} {%load static%}
+
+<head>
+</head>
+
+
+<div class="container" style="text-align: justify;">
+    
+    <form id="myForm" class="form" autocomplete="off" onsubmit="return saveAns();" action="{% url 'calculate-marks' pk=stud.ad_no %}" method="POST">
+         {% csrf_token %}
+        <h2 style="text-align: center;">{{course.course_name}}</h2>
+        <p style="font-weight: bold;text-align: right;font-size: large;" id="timer"></p><br>
+        {% for q in questions%}
+    <div class="card">
+        <div class="card-header">           
+         <h3>{{ forloop.counter }}.&nbsp;{{q.question}}</h3>
+        </div>
+        <input type="hidden" name="csrfmiddlewaretoken" value="C24rUotmdHawVQJL3KrqiWxvti8UffOFYUc8TRbZtLt36AVLdP3jbkzUVe3beRAa">
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+        <div class="form-check mx-4 d-flex align-items-center">
+            <input class="form-check-input" type="radio" name="{{ forloop.counter }}" id="{{q.option1}}" value="Option1">
+            <label class="form-check-label ml-3 ms-1" for="option1">
+              {{q.option1}}
+            </label>
+        </div>
+           </li>
+           <li class="list-group-item">
+        <div class="form-check mx-4 d-flex align-items-center">
+            <input class="form-check-input" type="radio" name="{{ forloop.counter }}" id="{{q.option2}}" value="Option2">
+            <label class="form-check-label ml-3 ms-1" for="option2">
+              {{q.option2}}
+            </label>
+        </div>
+</li>
+<li class="list-group-item">
+        <div class="form-check mx-4 d-flex align-items-center">
+            <input class="form-check-input" type="radio" name="{{ forloop.counter }}" id="{{q.option3}}" value="Option3">
+            <label class="form-check-label ml-3 ms-1" for="option3">
+              {{q.option3}}
+            </label>
+        </div>
+</li>
+<li class="list-group-item">
+        <div class="form-check mx-4 d-flex align-items-center">
+            <input class="form-check-input" type="radio" name="{{ forloop.counter }}" id="{{q.option4}}" value="Option4">
+            <label class="form-check-label ml-3 ms-1" for="option4">
+              {{q.option4}}
+            </label>
+        </div>
+        </li>
+        </ul>
+    </div>
+        {% endfor %}
+        <br>
+        <input class="btn btn-dark" type="submit" value="Submit">
+    </form>
+    <br><br><br>
+</div>
+
+<script> 
+    function saveAns() {
+        var ele = document.getElementsByTagName('input');
+        for (i = 0; i < ele.length; i++) {
+            if (ele[i].type == "radio") {
+                if (ele[i].checked) {
+                    console.log(ele[i].name);  // add this line
+                    console.log(ele[i].value);
+                    setCookie(ele[i].name, ele[i].value, 3);
+                }
+            }
+        }
+
+    }
+
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+</script>
+
+<script> 
+    const countdownDuration = {{ duration }} * 1000;
+      
+
+    let distance = countdownDuration;
+    
+    let x = setInterval(function() {
+      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      document.getElementById("timer").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+    
+      distance -= 1000;
+    
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+        document.getElementById("myForm").submit();
+      }
+    }, 1000);
+      
+</script>
+
+ {% endblock content %}
+ 

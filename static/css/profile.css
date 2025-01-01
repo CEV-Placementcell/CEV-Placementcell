@@ -1,0 +1,48 @@
+.profiletable
+{
+	cellpadding: 3px;
+	/*border: 1px solid;*/
+	margin-left: 10%;
+	width: 80%;
+	font-size: 26px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.profile
+{
+	position: relative;
+}
+/*.profile::after
+{
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-image: url("../images/placementcelllogo.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+	opacity: 0.15;
+}
+*/
+
+td{
+	/*border: 2px solid;*/
+}
+
+.editbutton
+{
+	background: #355C93;
+	color: #fff;
+	font-size: 24px;
+	width: 10%;
+}
+
+.editbutton:hover
+{
+	background: #a7cafc;
+	color: #333;
+}

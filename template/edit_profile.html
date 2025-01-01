@@ -1,0 +1,347 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Placement Cell: Edit Profile</title>
+
+  <!-- CSS FILES -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  <link href="{% static 'css/indexcss.css' %}" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+
+  <style>
+    a:link {
+      text-decoration: none;
+    }
+
+    footer {
+      background: linear-gradient(to bottom, #771f1f, var(--dark-color), transparent 200%);
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    }
+
+    .navbar-light .navbar-toggler {
+      color: #771f1f;
+      border-color: #771f1f;
+    }
+
+    .button-30 {
+      align-items: center;
+      border-radius: 8px;
+      border-width: 0;
+      box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+      height: 40px;
+      padding-left: 16px;
+      padding-right: 16px;
+      font-size: 18px;
+      background-color: #771f1f;
+      color: white;
+      border-radius: 8px;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: inline-flex;
+      justify-content: center;
+      line-height: 1;
+      transition: box-shadow .15s, transform .15s;
+      width: auto;
+    }
+
+    .button-30:hover {
+      box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+      transform: translateY(-2px);
+    }
+
+    .form-container {
+      background-color: #f0f0f0;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    .form-container h1 {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .form-container .form-label {
+      font-weight: bold;
+    }
+
+    .d-grid {
+      text-align: right;
+    }
+
+    footer {
+      background-color: #771f1f;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Mobile Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #771f1f;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img src="{% static 'images/logo-white.png' %}" style="width: 250px; height: auto;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="http://127.0.0.1:8000/stprofile/12m11"><b>&nbsp;Home</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="activeh nav-link text-white" href="http://127.0.0.1:8000/stprofile/12m11/edit_profile"><b>&nbsp;Edit Profile</b></a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link text-white" href="/logout"><b>&nbsp;Logout</b></a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Mobile Navbar -->
+
+  <br><br>
+
+  <div class="container">
+    <div class="form-container">
+      <h1><b>Edit Profile</b></h1>
+
+      {% for msgs in messages %}
+        <h5 style="color:#000; text-align:center;">{{msgs}}</h5>
+      {% endfor %}
+
+      <form method="POST" action="http://127.0.0.1:8000/stprofile/{{ user.id }}/edit_profile" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="mb-3">
+          <label class="form-label" for="name">Name:</label>
+          <input class="form-control form-control-sm" type="text" name="name" value="{{ user.name }}" required />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="admission_no">University Register No:</label>
+          <input class="form-control form-control-sm" type="text" name="admission_no" value="{{ user.ad_no }}" readonly />
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label" for="yo_add">Year of admission:</label>
+            <input class="form-control form-control-sm" type="number" name="yo_add" value="{{ user.yo_add }}" min="2000" max="2025" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="dob">Date of Birth:</label>
+            <input class="form-control form-control-sm" type="date" name="dob" value="{{ user.dob }}" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" aria-label="Default select example" for="program">Program:</label>
+            <select class="form-select form-select-sm" id="prog" name="program" value="{{ user.prog }}" required>
+              <option value="" selected="selected">Select program</option>
+            </select>
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="dept">Department:</label>
+            <select class="form-select form-select-sm" id="dept" name="dept" value="{{ user.dept }}" aria-label="Default select example" required>
+              <option value="" selected="selected">Select department</option>
+            </select>
+          </div>
+    
+    
+          <div class="mb-3">
+            <label class="form-label" aria-label="Default select example" for="course">Course:</label>
+            <select class="form-select form-select-sm" id="course" name="course" value="{{ user.course }}" required>
+              <option value="" selected="selected">Select course</option>
+            </select>
+          </div>
+    
+    
+          <div class="mb-3">
+            <label class="form-label" for="sslc">10th Percentage :</label>
+            <input class="form-control form-control-sm" type="number" name="sslc" value="{{ user.sslc }}"  required />
+          </div>
+    
+    
+          <div class="mb-3">
+            <label class="form-label" for="hsc">12th Percentage:</label>
+            <input class="form-control form-control-sm" type="number" name="hsc" value="{{ user.hsc }}" required />
+          </div>
+          
+    
+          <div class="mb-3">
+            <label class="form-label" for="phone_no">Phone Number:</label>
+            <input class="form-control form-control-sm" type="number" name="stud_ph" value="{{ user.phone_no }}" maxlength="10" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="email">Email ID:</label>
+            <input class="form-control form-control-sm" type="email" name="email" value="{{ st_con.email }}" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="a_ins">Area of interest:</label>
+            <input class="form-control form-control-sm" type="text" name="a_ins" value="{{ user.area_int }}" required />
+          </div>
+    
+    
+          <div class="mb-3">
+            <label class="form-label" for="skill">Skills:</label>
+            <input class="form-control form-control-sm" type="type" name="skill" value="{{ user.skill }}" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="fname">Father's Name:</label>
+            <input class="form-control form-control-sm" type="text" name="fname" value="{{ st_con.user.f_name }}" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="mname">Mother's Name:</label>
+            <input class="form-control form-control-sm" type="text" name="mname" value="{{ user.m_name }}" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="g_number">Guardian Contact Number:</label>
+            <input class="form-control form-control-sm" type="number" name="g_number" value="{{ user.g_number }}" maxlength="10" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="address">Address:</label>
+            <input class="form-control form-control-sm" type="text" name="address" value="{{ user.address }}" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="dis">District:</label>
+            <input class="form-control form-control-sm" type="text" name="dis" value="{{ user.dist }}" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="state">State:</label>
+            <input class="form-control form-control-sm" type="text" name="state" value="{{ user.state }}" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="pin">Pincode:</label>
+            <input class="form-control form-control-sm" type="number" name="pin" value="{{ user.pin }}" required />
+          </div>
+          
+    
+          <div class="mb-3">
+            <label class="form-label" for="photo">Photo:</label>
+            <input class="form-control form-control-sm" type="file" name="photo" value="{{ user.photo }}" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="password">Password:</label>
+            <input class="form-control form-control-sm" type="password" name="password" value="{{ user.password }}" required />
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label" for="cpassword"> Confirm Password:</label>
+            <input class="form-control form-control-sm" type="password" placeholder="Confirm Password" name="cpassword"
+              required>
+          </div>
+
+        <div class="d-grid gap-2 d-md-block">
+          <button type="reset" class="button-30">Reset</button>
+          <button type="submit" class="button-30">Save</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <br><br>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-white">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+
+      <div>
+        <a href="#" class="me-4 text-reset">
+          <i class="fa fa-facebook-official" style="font-size:24px"></i>
+        </a>
+        <a href="https://instagram.com/placement_cell_stc?igshid=YmMyMTA2M2Y=" class="me-4 text-reset">
+          <i class="fa fa-instagram" style="font-size:24px"></i>
+        </a>
+        <a href="#" class="me-4 text-reset">
+          <i class="fa fa-twitter" style="font-size:24px"></i>
+        </a>
+        <a href="#" class="me-4 text-reset">
+          <i class="fa fa-youtube-play" style="font-size:24px"></i>
+        </a>
+        <a href="#" class="me-4 text-reset">
+          <i class="fa fa-linkedin-square" style="font-size:24px"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h3 class="text-uppercase fw-bold mb-4"><b>Placement Cell</b></h3>
+            <p>
+              <b>Location:</b><br>
+              College of Engineering Vadakara<br>
+              Mandarathur - 673541, Kerala, India<br><br>
+              <a href="https://maps.app.goo.gl/RQiJvmgnb86huAre9" target="_blank" class="btn btn-light" style="border-radius: 8px;">Direction</a>
+            </p>
+          </div>
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4"><b>Contact</b></h6>
+            <p><i class="fa fa-home me-3"></i>Kurunthodi - College Rd</p>
+            <p>
+              <i class="fa fa-envelope me-3"></i>
+              placements@cev.ac.in
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center p-4">
+      <a class="text-reset fw-bold" href="#">
+        Placement Cell<br>College of Engineering Vadakara, Kozhikode
+      </a>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <!-- JAVASCRIPT FILES -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script>
+    $('.mobile-menu').click(function () {
+      $('.indexnavbar ul').toggle();
+    });
+  </script>
+</body>
+
+</html>

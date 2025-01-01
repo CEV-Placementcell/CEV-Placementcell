@@ -1,0 +1,173 @@
+#box{
+	width: 90%;
+	height: 1200px;
+	border: 1px solid #ddd;
+	/*margin-top:20px ;
+	margin-bottom:40px ;*/
+	margin-left:120px ;
+	border-radius:20px ;
+	box-shadow: 4px 4px 4px grey,
+                  0px 0px 8px grey,
+                  0px 0px 12px grey;
+	margin: 0 auto ;	
+	font-family:times new roman;
+
+}
+.header{
+	text-align: center;
+	padding-top:10px ;
+	font-size:30px ;
+	font-weight: bold;
+
+}
+.fulltable1{
+    width: 100%;
+    height: 550px;
+}
+
+.box1{
+  width: 45%;
+  height:500px;
+  float: left;
+  border-radius:10px ;
+  margin-left: 40px;
+  box-shadow: 4px 4px 4px grey,
+                  0px 0px 8px grey,
+                  0px 0px 12px grey;
+  align-content:center ;
+  background-color: white;
+}
+.box2{
+  width: 45%;
+  height:500px;
+  margin-left: 700px;
+  margin-top: 40px;
+  border-radius:10px ;
+  box-shadow: 4px 4px 4px grey,
+                  0px 0px 8px grey,
+                  0px 0px 12px grey;
+  align-content:center ;
+  background-color: white;
+}
+.table1{
+  margin-top: 80px;
+
+}
+.table2{
+  margin-top: 80px;
+  padding-top: 80px;
+
+}
+
+th
+{
+  background-color:#40567B;
+  color: white;
+  cursor: pointer;
+  height: 20px;
+  width: 30%;
+  top: 0;
+}
+td
+{
+  font-size: 18px;
+  height: 20px;
+}
+
+table, th, td {
+  padding: 20px;
+  border: 1px solid lightgray;
+  text-align: center;
+  cursor: pointer;
+}
+tr:nth-child(odd){
+  /*background-color: lightskyblue;*/
+}
+tr:nth-child(odd):hover{
+  background-color: #A9CCCF;
+}
+tr:nth-child(even){
+  /*background-color: #ededed;*/
+}
+tr:nth-child(even):hover{
+  background-color:  #A9CCCF;
+}
+
+button{
+  padding: 10px 15px;
+  width: 10%;
+  margin-left:600px;
+  border: 0;
+  outline: none;
+  background: #0d47a1;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500px;
+  border-radius: 30px;
+}
+
+
+.job{
+	text-align: center;
+	padding-top:3px ;
+	font-weight: bold;
+	font-size: 20px;
+}
+.job-description{
+	font-size:15px ;
+
+}
+.poster
+{
+	text-align:center ;
+	color:blue ;
+}
+.bigbox{
+	margin-top:60px ;
+	margin-bottom:120px ;
+
+
+}
+.adjust
+{
+	margin-left: 70px ;
+	width:80% ;
+  font-size: 20px;
+
+}
+
+
+
+.popup {
+  position: fixed;
+  width: 80vw;
+  left: 10vw;
+  height: 400px;
+  top: 20vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  background: white;
+  display: none;
+}
+
+
+#screenshot img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+}
+
+#screenshot .close,#reply-popup .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1rem;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+

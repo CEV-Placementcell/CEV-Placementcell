@@ -1,0 +1,36 @@
+{% extends 'exam/adminbase.html' %}
+{% block content %}
+{%load static%}
+
+
+<div class="container">
+  <div>
+    <div>
+      <h2>Questions</h2><br>
+      <br>
+    </div>
+    <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+
+          <th>Questions</th>
+          <th>Marks</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      {% for c in questions %}
+      <tr>
+
+        <td> {{c.question}}</td>
+        
+        <td>{{c.marks}}</td>
+        <td><a class="btn btn-danger btn-xs" href="{% url 'delete-question' c.id  %}"><small class="material-symbols-outlined">delete</small></a></td>
+        
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  </div>
+</div>
+{% endblock content %}

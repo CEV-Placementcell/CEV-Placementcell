@@ -1,0 +1,53 @@
+.site-footer {
+  /*background-image: url('../images/stc.jpeg');*/
+  background-color: deepskyblue;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 35px;
+  padding-bottom:-40px;
+  position: relative;
+}
+
+.site-footer::before {
+  content: "";
+ /*background: linear-gradient(to top, var(--dark-color), transparent 200%);*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.site-footer .container {
+  position: relative;
+   /*background-image: url('../images/stc.jpeg')*/
+
+}
+
+.tooplate-mt30 {
+margin-top: 30px;
+}
+.tooplate-mt60 {
+margin-top: 60px;
+}
+
+.copyright-text {
+  font-size: var(--menu-font-size);
+}
+
+.tel-link {
+  color: var(--p-color);
+}
+
+.site-footer a:hover {
+  color: var(--white-color);
+}
+
+.site-footer a {
+  color: #AAA;;
+}
+
+.site-footer p {
+color: #AAA;
+}

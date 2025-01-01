@@ -1,0 +1,364 @@
+/* 
+.about{
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.about_us{
+  text-align: center;
+  font-size:1.700em ;
+  font-weight: inherit;
+  font-weight: bold;
+
+}
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:times new roman;
+}
+
+
+.indexheader{
+text-align: left;
+height: 120px;
+padding-left: 0px;
+width: 100%;
+font-size: 36px;
+font-weight: bold;
+}
+
+.indexnavbar
+{
+background-color:#40567B;
+text-align: center;
+height: 60px;
+margin: 0px;
+padding: 0px;
+width: 100%;
+font-size: 20px;
+
+}
+
+.indexnavbar ul
+{
+display: inline-flex;
+list-style: none;
+width: 100%;
+padding: 0px;
+
+
+}
+
+.indexnavbar ul li
+{
+width:120%;
+margin:7px;
+padding: 7px;
+color:white;
+font-weight:900;
+
+
+}
+.indexnavbar ul li a
+{
+   text-decoration: none;
+   color:white;
+}
+.active1, .indexnavbar ul li:hover
+{
+background:#771f1f;
+border-radius:1px;
+}
+.Login
+{
+display: none;
+width: 10%;
+align-content: center;
+margin: 0 auto;
+}
+.Login ul
+{
+width: 80%;
+align-content: center;
+}
+
+.Login ul li
+{
+text-align: center;
+width: 100%;
+}
+ .indexnavbar ul li:hover .Login
+{
+display: block;
+position: absolute;
+background-color: #771f1f;
+
+}
+ .indexnavbar ul li:hover .Login ul
+{
+display: block;
+margin: 10px;
+}*/
+
+/*scrolling notification*/
+ 
+/*.marquee
+{
+width: 100%;
+background-color:whitesmoke;
+text-transform: uppercase;
+white-space:nowrap ;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.marquee div
+{
+font-size:1.500em;
+font-family: sans-serif;
+animation: animate 11s linear infinite;
+padding-left: 100%;
+
+}
+@keyframes animate{
+100%{
+transform: translate(-100%,0);
+}
+}
+.placement-partners
+{
+
+font-size:1.700em ;
+font-weight: bold;
+text-align: center;
+}*/
+/*scrolling posters*/
+
+/*
+.slider
+{
+height: 250px;
+margin: auto;
+position: relative;
+width: 90%;
+display: grid;
+place-items: center;
+overflow: hidden;*/
+/*padding-top: 50px;
+padding-bottom:30px;*/
+
+/*
+}
+.slide-track
+{
+display: flex;
+width:calc(250px * 14 );
+animation: scroll 10s linear infinite;
+
+}
+@keyframes scroll{
+0%{
+transform: translateX(0);
+}
+100%{
+transform: translateX(calc(-250px * 4));
+}
+}
+
+.slide-images
+{
+height: 200px;
+width: auto;
+display: flex;
+align-items: center;
+padding: 20px;
+}*/
+
+/* RJ New */
+.dropdown-menu {
+  display: none; /* Ensure default is hidden */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; /* Only display on hover */
+}
+/* Rj end */
+
+.indexheader {
+  text-align: left;
+  height: 120px;
+  padding-left: 0px;
+  width: 100%;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.indexnavbar {
+  background-color: #771f1f;
+  text-align: center;
+  height: 60px;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+
+}
+
+.indexnavbar ul {
+  display: inline-flex;
+  list-style: none;
+  width: 100%;
+  padding: 0px;
+
+
+}
+
+.indexnavbar ul li {
+  width: 120%;
+  margin: 7px;
+  color: white;
+  font-weight: 900;
+
+
+}
+
+.indexnavbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.activeh,
+.indexnavbar ul li:hover {
+  background: #a93636;
+  border-radius: 8px;
+
+}
+
+
+.Login {
+  display: none;
+  width: 10%;
+  align-content: center;
+  margin: 0 auto;
+
+}
+
+.Login ul {
+  width: 80%;
+  align-content: center;
+}
+
+.Login ul li {
+  text-align: center;
+  width: 100%;
+}
+
+
+
+.indexnavbar ul li:hover .Login {
+  display: block;
+  position: absolute;
+  background-color: #771f1f;
+  border-radius: 8px;
+  width: auto;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.indexnavbar ul li:hover .Login ul {
+  display: block;
+  margin: 10px;
+}
+
+/*scrolling notification*/
+.marquee {
+  width: 100%;
+  background-color: whitesmoke;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.marquee div {
+  animation: animate 10s linear infinite;
+  padding-left: 100%;
+  width: 100%;
+}
+
+@keyframes animate {
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.placement-partners {
+  font-size: 1.700em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*scrolling posters*/
+.slider {
+
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  /*padding-top: 50px;
+  padding-bottom:30px;*/
+
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 14);
+  animation: scroll 10s linear infinite;
+
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 4));
+  }
+}
+
+
+.slide-images {
+  height: 200px;
+  width: auto;
+  display: flex;
+  /* align-items: center; */
+  padding: 20px;
+  /*padding-bottom: 10px;
+  perspective: 100px;*/
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+.slide-images.hidden {
+  opacity: 0;
+}
+
+.mobile {
+  display: none;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+}

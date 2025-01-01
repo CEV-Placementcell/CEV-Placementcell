@@ -1,0 +1,36 @@
+from django.urls import path, include
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('registration', views.registration, name='registration'),
+    path('studlogin', views.studlogin, name='studlogin'),
+    path('studlogout', views.studlogout, name='studlogout'),
+    path('studentinterface/<str:id>', views.studentinterface, name='studentinterface'),
+    path('applyjob/<str:id>/<str:dno>', views.applyjob, name='applyjob'),
+    path('posterview/<str:id>/<str:dno>', views.posterview, name='posterview'),
+    path('stprofile/<str:id>', views.stprofile, name='stprofile'),
+    path('stprofile/<str:ad_no>/edit_profile', views.edit_profile, name='edit_profile'),
+    # path('stprofile/update/<str:id>', views.update_profile, name='update_profile'),
+    path('apphistory/<str:id>', views.apphistory, name='apphistory'),  # Changed <str:id> to <str:id>
+    path('apphistory2/<str:id>', views.apphistory2, name='apphistory2'),
+    path('apphistory3/<str:id>', views.apphistory3, name='apphistory3'),
+    path('eventreg/<str:id>', views.eventreg, name='eventreg'),
+    path('applyevent/<str:id>/<slug:eid>', views.applyevent, name='applyevent'),
+    path('doubt/<str:id>', views.doubt, name='doubt'),
+    path('studresponses/<str:id>', views.studresponses, name='studresponses'),
+    path('placed/<str:id>/<str:dno>', views.placed, name='placed'),
+    path('deletereplay/<str:dno>/<str:ad_no>/<str:id>', views.deletereplay, name='deletereplay'),
+    path('student-dashboard/<str:id>', views.student_dashboard_view, name='student-dashboard'),
+    path('student-exam/<str:id>', views.student_exam_view, name='student-exam'),
+    path('student-marks/<str:id>', views.student_marks_view, name='student-marks'),
+    path('answer-key/<str:id>', views.student_view_solution, name='answer-key'),
+    path('take-exam/<str:pk>/<str:ck>', views.take_exam_view, name='take-exam'),
+    path('check-marks/<str:pk>/<str:ck>', views.check_marks_view, name='check-marks'),
+    path('start-exam/<str:pk>/<str:ck>', views.start_exam_view, name='start-exam'),
+    path('calculate-marks/<str:pk>', views.calculate_marks_view, name='calculate-marks'),
+    path('download/<str:id>/<str:pk>', views.download_solution, name='download_solution'),
+    path('view-result/<str:pk>', views.view_result_view, name='view-result'),
+    path('send-email-view/<str:id>', views.send_email_view, name='send-email-view'),
+    path('testimonials/', views.testimonials_view, name='testimonials'),
+]
